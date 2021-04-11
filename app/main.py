@@ -9,7 +9,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    //return {"HOST": f'{socket.gethostbyname(socket.gethostname())}'}
+    # return {"HOST": f'{socket.gethostbyname(socket.gethostname())}'}
     return {"HOST": f'IP'}
 
 
