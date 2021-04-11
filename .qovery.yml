@@ -1,11 +1,11 @@
 ---
 application:
-  name: "fastapi"
-  project: "fastapi"
+  name: "fast-api"
+  project: "fast-api"
   organization: "QoveryCommunity"
 routers:
-- name: "main-fastapi"
+- name: "main-fast-api"
   routes:
-  - application_name: "fastapi"
+  - application_name: "fast-api"
     paths:
     - "/*"
