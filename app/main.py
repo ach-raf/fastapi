@@ -1,10 +1,14 @@
+import os 
+
 import json
+
+import uvicorn
 
 from typing import Optional
 
 from fastapi import FastAPI
 
-import uvicorn
+
 
 def read_json_file(filename):
     with open(filename) as json_file:
@@ -22,7 +26,10 @@ def read_root():
 
 @app.get("/imdb")
 def read_imdb():
-    return read_json_file('./data/imdb.json')
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    imdb_json = f'{dir_path}\\data\\imdb.json'
+    data = read_json_file(imdb_json)
+    return data
 
 
 @app.get("/items/{item_id}")
